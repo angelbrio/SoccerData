@@ -1,58 +1,71 @@
-# ⚽ La Liga 2024/2025 Statistics Analysis
+# ⚽ La Liga 2024/2025 Statistics Dashboard
 
-This project analyzes real data from the **2024/25 Spanish La Liga season**, using Python data analysis tools. It generates key performance indicators such as:
+This project analyzes real data from the **2024/25 Spanish La Liga season**, using Python and data visualization tools. It includes:
 
-- 🔝 **Top teams by total goals scored**
+- 🔝 **Top-scoring teams**
 - 📈 **Goals per matchday**
-- 📊 **KPIs exported as CSV for visualization in Power BI or Excel**
+- 📊 **KPIs exportable to Power BI or Excel**
+- 🌐 **Interactive web dashboard built with Streamlit**
 
-> ✅ This project is ideal for practicing data analysis, visualization, and cleaning sports datasets.
+> ✅ A perfect project for practicing data cleaning, aggregation, and visual storytelling with football data.
+
+---
+
+## 🚀 Try the Live App (Streamlit)
+
+You can explore the dashboard live here:  
+👉 **[angelbrio-soccerdata.streamlit.app](https://angelbrio-soccerdata.streamlit.app)**
+
+> ⏳ *Note: The app may take a few seconds to load if it's waking up from sleep mode.*
 
 ---
 
 ## 🧰 Technologies Used
 
-| Tool                | Primary Use                            |
-|---------------------|--------------------------------------|
-| **Python**          | Main programming language            |
-| **Pandas**          | Data manipulation and aggregation    |
-| **CSV (football-data.co.uk)** | Original match dataset        |
-| **Power BI / Excel**| Final visualization of exported KPIs|
+| Tool                  | Purpose                                 |
+|------------------------|------------------------------------------|
+| **Python**             | Core programming language                |
+| **Pandas**             | Data manipulation & cleaning             |
+| **Matplotlib / Seaborn** | Charting and plots                    |
+| **Streamlit**          | Web app framework for data apps          |
+| **CSV (football-data.co.uk)** | Raw match data source             |
+| **Power BI / Excel**   | Optional visualization of exported data |
 
 ---
 
 ## 📂 Project Structure
 
 Soccerdata/
-├── SP1.csv # La Liga match dataset (football-data.co.uk)
-├── soccer.py # Main Python script
-├── output/ # Exported CSV results
+├── SP1.csv # La Liga match dataset
+├── soccer.py # Main Streamlit app
+├── requirements.txt # Project dependencies
+├── output/ # Generated CSV files
 │ ├── goles_por_equipo.csv
 │ └── goles_por_jornada.csv
-└── README.md # This file
+└── README.md
 
 
 ---
 
-## 📝 How to Reproduce the Project Step-by-Step
+## 📝 Run the Project Locally
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/futbol-dashboard.git
-cd futbol-dashboard
+git clone https://github.com/angelbrio/SoccerData.git
+cd SoccerData
 
+2. Install dependencies
 
-### 2. Install dependencies
+pip install -r requirements.txt
 
-pip install pandas
+3. Run the Streamlit app
 
-### 2. Download the dataset
+streamlit run soccer.py
 
-Go to https://www.football-data.co.uk/spainm.php and download the CSV file for La Liga.
+4. (Optional) Update the dataset
+You can download the most recent La Liga CSV from:
+📥 football-data.co.uk/spainm.php
 
-Place the downloaded SP1.csv file in the root project folder.
+Place the new SP1.csv file in the project root.
 
-### 3. Run the analysis
-
-python soccerdata.py
